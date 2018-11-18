@@ -50,6 +50,7 @@ public class ClickController : MonoBehaviour
         // if confirm controller is true, shows the confirm menu
         if (confirmCtrl && !confirm.activeSelf)
             changeState(confirm);
+        
     }
 
     // check if the given answer is right among the correct answers saved in an array
@@ -115,10 +116,10 @@ public class ClickController : MonoBehaviour
         switch (buttonPressed)
         {
             case "Question1":
-                question.text = questions[0];
-                answer.text = "Answer 1: ";
-                userAnswers[0] = userAnswer.text;
-                break;
+                question.text = questions[0]; // quest text recieves the text
+                answer.text = "Answer 1: "; // answer text recieves the first answer
+                userAnswers[0] = userAnswer.text; // user answer first question recieves the last object selected
+                break; // end case
             case "Question2":
                 question.text = questions[1];
                 answer.text = "Answer 2: ";
